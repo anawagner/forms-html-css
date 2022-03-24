@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>MDN Your First Form</title>
+</head>
+
+<body>
+  <form action="/my-handling-form-page" method="post">
+    <!-- It is common practice to wrap a label and its widget with li elements. 
+      p and div elements are also commonly used lists are recommended for multiple 
+      checkboxes, radio buttons radio buttons should go in fieldset tags to group 
+      sections and structure complex forms: h1 h2, section -->
+    <ul>
+      <li>
+        <label for="name">Name:
+          <!-- title shows when you hover, aria-label is ready by screen readers -->
+          <abbr title="required" aria-label="required">*</abbr>
+        </label>
+        <input type="text" id="name" name="user_name">
+      </li>
+      <li>
+        <label for="mail">E-mail:</label>
+        <input type="email" id="mail" name="user_email">
+      </li>
+      <li>
+        <label for="msg">Message:</label>
+        <textarea id="msg" name="user_message"></textarea>
+      </li>
+      <li class="button">
+        <button type="submit">Send your message</button>
+      </li>
+    </ul>
+  </form>
+</body>
+
+</html>
