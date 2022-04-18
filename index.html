@@ -2,96 +2,117 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
 </head>
 
 <body>
-    <form action="http://httpbin.org/post" method="post">
+  <h1>Bunch of Form stuff</h1>
+  <p>This is a collection of form stuff to test out styling of form elements. </p>
+  <form action="http://httpbin.org/post" method="post">
 
-        <fieldset>
-            <legend>Contact Details</legend>
-            <!-- "for" associates a label with an input's id -->
-            <label for="name">Name</label>
-            <!-- name gives the input a name for the backend  inputs without a name will be ignored on submit -->
-            <input type="text" id="name" name="name" placeholder="Nicholas">
+    <h2>This is the Form</h2>
+    <p>Required fields are labelled with "required".</p>
+    <fieldset>
+      <legend>Contact Details</legend>
 
-            <label for="email">email</label>
-            <input type="email" name="email" id="email" placeholder="nicholas@foxy.com">
-            <div>
-                <input type="checkbox" id="newsletter" name="news_letter">
-                <label for="newsletter">Send me the news letter</label>
-            </div>
-        </fieldset>
+      <div>
+        <!-- "for" associates a label with an input's id -->
+        <label for="fname">First Name: </label>
+        <!-- name gives the input a name for the backend  inputs without a name will be ignored on submit -->
+        <input type="text" id="fname" name="fname" placeholder="Nicholas" required>
+        <span></span>
+      </div>
+      <div>
+        <label for="lname">Last Name: </label>
+        <input type="text" id="lname" name="lname" placeholder="Evans" required>
+        <span></span>
+      </div>
+      <div>
+        <label for="email">email: </label>
+        <input type="email" name="email" id="email" placeholder="nicholas@foxy.com">
+        <span></span>
+      </div>
+      <div>
+        <label for="age">Age (must be 12+): </label>
+        <input id="age" name="age" type="number" min="12" max="120" required>
+        <span></span>
+      </div>
+      <div class="check">
+        <input type="checkbox" id="newsletter" name="news_letter">
+        <label for="newsletter">Send me the news letter</label>
+      </div>
+    </fieldset>
 
-        <fieldset>
-            <legend>Options</legend>
-            <div>
-                Which one?
-                <input type="radio" id="fox" name="which" value="fox" checked>
-                <label for="fox">Fox</label>
-                <input type="radio" id="hound" name="which" value="hound">
-                <label for="hound">Hound</label>
-            </div>
+    <fieldset>
+      <legend>Options</legend>
+      <div class="check">
+        Which one?
+        <input type="radio" id="fox" name="which" value="fox" checked>
+        <label for="fox">Fox</label>
+        <input type="radio" id="hound" name="which" value="hound">
+        <label for="hound">Hound</label>
+      </div>
 
-            <label for="amount">Amount:</label>
-            <input type="number" id="amount" name="amount">
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" name="amount">
 
-            <label for="dob">Date of Birth:</label>
-            <input type="date" id="dob" name="dob">
-
-
-            <select name="opt" id="options">
-                <optgroup label="qualitative">
-                    <option value="best">best</option>
-                    <option value="ok">ok</option>
-                    <option value="limited">limited</option>
-                </optgroup>
-                <optgroup label="quantitative">
-                    <option value="1">one</option>
-                    <option value="2">two</option>
-                    <option value="3">three</option>
-                </optgroup>
-            </select>
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob">
 
 
-        </fieldset>
+      <select name="opt" id="options">
+        <optgroup label="qualitative">
+          <option value="best">best</option>
+          <option value="ok">ok</option>
+          <option value="limited">limited</option>
+        </optgroup>
+        <optgroup label="quantitative">
+          <option value="1">one</option>
+          <option value="2">two</option>
+          <option value="3">three</option>
+        </optgroup>
+      </select>
 
-        <fieldset>
-            <legend>Comments</legend>
-            <textarea name="comment" id="comment" cols="30" rows="10">Some initial content</textarea>
-        </fieldset>
-        <fieldset>
-            <legend>Pizza Toppings</legend>
 
-            <div>
-                <input type="checkbox" id="sausage" name="topping" value="sausage">
-                <label for="sausage">Sausage</label>
-            </div>
+    </fieldset>
 
-            <div>
-                <input type="checkbox" id="onions" name="topping" value="onions">
-                <label for="onions">Onions</label>
-            </div>
+    <fieldset>
+      <legend>Comments</legend>
+      <textarea name="comment" id="comment" cols="30" rows="10">Some initial content</textarea>
+    </fieldset>
+    <fieldset>
+      <legend>Pizza Toppings</legend>
 
-            <div>
-                <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
-                <label for="pepperoni">Pepperoni</label>
-            </div>
+      <div class="check">
+        <input type="checkbox" id="sausage" name="topping" value="sausage">
+        <label for="sausage">Sausage</label>
+      </div>
 
-            <div>
-                <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
-                <label for="mushrooms">Mushrooms</label>
-            </div>
-        </fieldset>
+      <div class="check">
+        <input type="checkbox" id="onions" name="topping" value="onions">
+        <label for="onions">Onions</label>
+      </div>
 
-        <button type="submit">Submit</button>
+      <div class="check">
+        <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
+        <label for="pepperoni">Pepperoni</label>
+      </div>
 
-        <!-- avoid reset buttons on web forms -->
-        <button type="reset">Reset</button>
-    </form>
+      <div class="check">
+        <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
+        <label for="mushrooms">Mushrooms</label>
+      </div>
+    </fieldset>
+
+    <button type="submit">Submit</button>
+
+    <!-- avoid reset buttons on web forms -->
+    <button type="reset">Reset</button>
+  </form>
 </body>
 
 </html>

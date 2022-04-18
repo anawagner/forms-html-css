@@ -1,0 +1,170 @@
+body {
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: 1em;
+  background-color: #f6f6f8;
+  color: #333;
+  padding: 1em;
+  margin: 0;
+}
+
+/* by default some widgets do not inherit font-family and font-size */
+/* button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+} */
+
+button, label, input, select, progress, meter {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+}
+
+
+/* input {
+  -webkit-appearance: none;
+  appearance: none;
+} */
+
+/*
+input[type="search"] {
+    -webkit-appearance: none;
+    appearance: none;
+}*/
+
+form {
+  margin: 0 auto;
+  width: 400px;
+  padding: 0 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
+
+form > h2 {
+  text-align: center;
+}
+
+form > div {
+  margin-bottom: 20px;
+}
+
+/* label {
+  display: inline-block;
+  width: 110px;
+  text-align: right;
+} */
+
+/* input[type=submit] {
+  display: block;
+  margin: 0 auto;
+} */
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  border: 1px solid gray;
+  /* Adjusts the position of the checkboxes on the text baseline */
+  vertical-align: -2px;
+  /* Set here so that Windows' High-Contrast Mode can override */
+  color: green;
+}
+
+input[type="checkbox"]::before {
+  content: "✔";
+  position: absolute;
+  font-size: 1.2em;
+  right: -1px;
+  top: -0.3em;
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked::before {
+  /* Use `visibility` instead of `display` to avoid recalculating layout */
+  visibility: visible;
+}
+
+input[type="checkbox"]:disabled {
+  border-color: black;
+  background: #ddd;
+  color: gray;
+}
+
+input[type="text"], input[type="datetime-local"], input[type="color"], select {
+  box-shadow: inset 1px 1px 3px #ccc;
+  border-radius: 5px;
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: "▼";
+  font-size: 1rem;
+  top: 6px;
+  right: 10px;
+  position: absolute;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+button {
+  width: 60%;
+  margin: 0 auto;
+}
+
+input[type="range"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background: red;
+  height: 2px;
+  padding: 0;
+  outline: 1px solid transparent;
+}
+
+input[type="color"] {
+  border: 0;
+  padding: 0;
+}
+
+/* hiding the file picker button and output
+you will have to replace the output with a javascript function */
+input[type="file"] {
+  height: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+label[for="file"] {
+  box-shadow: 1px 1px 3px #ccc;
+  background: linear-gradient(to bottom, #eee, #ccc);
+  border: 1px solid rgb(169, 169, 169);
+  border-radius: 5px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+label[for="file"]:hover {
+  background: linear-gradient(to bottom, #fff, #ddd);
+}
+
+label[for="file"]:active {
+  box-shadow: inset 1px 1px 3px #ccc;
+}

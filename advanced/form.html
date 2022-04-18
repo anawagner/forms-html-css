@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Form Styling</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form>
+    <h2>Fill Out This Form</h2>
+    <p>
+      <label for="search">search: </label>
+      <input id="search" name="search" type="search">
+    </p>
+    <p>
+      <label for="text">text: </label>
+      <input id="text" name="text" type="text">
+    </p>
+    <p>
+      <label for="date">date: </label>
+      <input id="date" name="date" type="datetime-local">
+    </p>
+    <p>
+      <label for="radio">radio: </label>
+      <input id="radio" name="radio" type="radio">
+    </p>
+    <p>
+      <label for="checkbox">checkbox: </label>
+      <input id="checkbox" name="checkbox" type="checkbox">
+    </p>
+
+    <fieldset>
+      <legend>Fruit preferences</legend>
+  
+      <p>
+        <label>
+          <input type="checkbox" name="fruit-1" value="cherry">
+          I like cherry
+        </label>
+      </p>
+      <p>
+        <label>
+          <input type="checkbox" name="fruit-2" value="banana" disabled>
+          I can't like banana
+        </label>
+      </p>
+      <p>
+        <label>
+          <input type="checkbox" name="fruit-3" value="strawberry">
+          I like strawberry
+        </label>
+      </p>
+    </fieldset>
+
+    <p><input type="button" value="button"></p>
+
+    <div>
+      <label for="select">Select box:</label>
+      <div class="select-wrapper"><select id="select" name="select">
+        <option>Banana</option>
+        <option>Cherry</option>
+        <option>Lemon</option>
+      </select></div>
+    </div>
+    <div>
+      <label for="myFruit">"Favorite fruit?" datalist:</label>
+      <input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+      <datalist id="mySuggestion">
+        <option>Apple</option>
+        <option>Banana</option>
+        <option>Blackberry</option>
+        <option>Blueberry</option>
+        <option>Lemon</option>
+        <option>Lychee</option>
+        <option>Peach</option>
+        <option>Pear</option>
+      </datalist>
+    </div>
+    <div>
+      <label for="date1">Datetime local: </label>
+      <input id="date1" name="date1" type="datetime-local">
+    </div>
+    <div>
+      <label for="range">Range: </label>
+      <input id="range" name="range" type="range">
+    </div>
+    <div>
+      <label for="color">Color: </label>
+      <input id="color" name="color" type="color">
+    </div>
+    <div>
+      <label for="file">File picker: </label>
+      <input id="file" name="file" type="file" multiple>
+      <ul id="file-list">
+
+      </ul>
+    </div>
+    <div>
+      <!-- use an alternative: https://kimmobrunfeldt.github.io/progressbar.js/ -->
+      <label for="progress">Progress: </label>
+      <progress max="100" value="75" id="progress">75/100</progress>
+    </div>
+    <div>
+      <label for="meter">Meter: </label>
+      <meter  id="meter" min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
+    </div>
+    <div><button>Submit?</button></div>
+    
+  </form>
+</body>
+</html>
